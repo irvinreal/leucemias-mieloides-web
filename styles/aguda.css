@@ -1,0 +1,11 @@
+img.img {
+    width: 50vw !important;
+}
+
+.bg-section {
+    background-color: rgb(247, 247, 247);
+}
+
+.fs-7 {
+    font-size: .8rem;
+}
