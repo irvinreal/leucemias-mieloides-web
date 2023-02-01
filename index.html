@@ -15,78 +15,111 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./styles/main.css" />
-        <link rel="shortcut icon" href="./assets/imgs/tema-principal/medicallabs-icon.png" type="image/x-icon">
+        <link
+            rel="shortcut icon"
+            href="./assets/imgs/tema-principal/medicallabs-icon.png"
+            type="image/x-icon"
+        />
         <title>Leucemias Meloides</title>
     </head>
     <body>
         <main id="main">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"
-                        ><img
-                            src="./assets/imgs/tema-principal/medicallabs-logo-png.png"
-                            alt="medical-labs-logotipo"
-                            id="logo-nav"
-                    /></a>
+                    <a class="navbar-brand ms-5" href="index.html">Leucemias Mieloides</a>
                     <button
                         class="navbar-toggler"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar"
                     >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    href="evaluacion.html"
-                                    >Evaluación</a
+                    <div
+                        class="offcanvas offcanvas-end"
+                        tabindex="-1"
+                        id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel"
+                    >
+                        <div class="offcanvas-header">
+                            <a href="index.html">
+                                <h5
+                                    class="offcanvas-title"
+                                    id="offcanvasNavbarLabel"
                                 >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="bibliografias.html">Bibliografías</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="acerca-de-nosotros.html">Acerca de Nosotros</a>
-                            </li>
-                            <li class="nav-item">
+                                    Leucemias Mieloides
+                                </h5>
+                            </a>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul
+                                class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-3"
+                            >
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link active"
+                                        aria-current="page"
+                                        href="evaluacion.html"
+                                        >Evaluación</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="bibliografias.html">Bibliografías</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        href="acerca-de-nosotros.html"
+                                        >Acerca de Nosotros</a
+                                    >
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
                                 <input
+                                    class="form-control me-2"
                                     type="search"
-                                    placeholder="Buscar"
-                                    id="buscador"
+                                    placeholder="Search"
+                                    aria-label="Search"
                                 />
-                            </li>
-                            <li class="nav-item">
-                                <input
-                                    type="button"
-                                    value="Buscar"
-                                    id="btn-buscador"
-                                />
-                            </li>
-                        </ul>
+                                <button
+                                    class="btn btn-outline-success"
+                                    type="submit"
+                                >
+                                    Search
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>
-            <div
-                class="row justify-content-center align-items-center"
-                style="height: 90%"
-            >
-                <div class="col">
-                    <h1 class="mb-3 text-center">Leucemias Mieloides</h1>
-                    <!-- <h2 class="fs-5">(Ilustracion)</h2> -->
-                    <div class="col text-center">
-                        <a
-                            href="#section-que-es-la-leucemia"
-                            id="a-que-es-la-leucemia"
-                            class="text-center"
-                            >¿Qué es la Leucemia?</a
-                        >
+            <div class="container" style="height: 90%">
+                <div
+                    class="row justify-content-center align-items-center"
+                    style="height: 100%"
+                >
+                    <div class="col-8 text-center">
+                        <div class="row justify-content-center">
+                            <h1 class="mb-3 text-center">
+                                Leucemias Mieloides
+                            </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a
+                                    href="#section-que-es-la-leucemia"
+                                    id="a-que-es-la-leucemia"
+                                    class="text-center"
+                                    >¿Qué es la Leucemia?</a
+                                >
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,7 +137,7 @@
                     <div
                         class="row justify-content-center align-items-center mt-5 mx-5"
                     >
-                        <div class="col text-center">
+                        <div class="col-12 text-center">
                             <p class="fs-6">
                                 Son cánceres que se origina en las células que
                                 normalmente madurarían hacia los diferentes
@@ -120,14 +153,16 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row mt-5 me-5">
-                        <p class="text-end">(American Cancer Society, 2018)</p>
+                    <div class="row mt-5">
+                        <p class="text-center">
+                            (American Cancer Society, 2018)
+                        </p>
                     </div>
-                    <div class="row text-end mt-5">
-                        <div class="col">
+                    <div class="row mt-4">
+                        <div class="col-10 text-end">
                             <button
                                 type="button"
-                                class="btn close-section mt-5"
+                                class="btn close-section"
                                 id="btn-close-section"
                             >
                                 <i
@@ -147,14 +182,16 @@
                 style="height: 100%"
             >
                 <div class="col">
-                    <div class="row">
-                        <h1 class="mb-3 text-center">
-                            Leucemia mieloide crónica
-                        </h1>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h1 class="mb-5 text-center">
+                                Leucemia mieloide crónica
+                            </h1>
+                        </div>
                         <!-- <h2 class="fs-5">(Ilustracion)</h2> -->
                     </div>
-                    <div class="row">
-                        <div class="col">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
                             <p class="text-center">
                                 Se produce un cambio genético en una versión
                                 temprana (inmadura) de células mieloides (las
@@ -168,12 +205,12 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p class="text-end">
+                            <p class="text-center">
                                 (American Cancer Society, 2018)
                             </p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col text-center">
                             <a
                                 href="leucemia-mieloide-cronica.html"
@@ -195,14 +232,14 @@
                 style="height: 100%"
             >
                 <div class="col">
-                    <div class="row">
-                        <h1 class="mb-3 text-center">
-                            Leucemia mieloide aguda
-                        </h1>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h1 class="text-center">Leucemia mieloide aguda</h1>
+                        </div>
                         <!-- <h2 class="fs-5">(Ilustracion)</h2> -->
                     </div>
-                    <div class="row">
-                        <div class="col">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-9">
                             <p class="text-center">
                                 La leucemia mieloide aguda se inicia en la
                                 médula ósea (la parte blanda del interior de
@@ -217,13 +254,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <p class="text-end">
-                                (American Cancer Society, 2018)
-                            </p>
+                        <div class="col text-center">
+                            <p>(American Cancer Society, 2018)</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col text-center">
                             <a
                                 href="leucemia-mieloide-aguda.html"
@@ -236,7 +271,8 @@
                 </div>
             </div>
         </section>
-        <section class="section-img one">
+        <!-- Esto va en otra página -->
+        <!-- <section class="section-img one">
             <div class="degradado"></div>
             <div class="contain-one animado">
                 <h4 class="bacteria3">Bacteria tipo 31</h4>
@@ -275,7 +311,12 @@
                     >Ver más<i class="bi bi-caret-down"></i
                 ></a>
             </div>
-        </section>
+        </section> -->
         <script src="./scripts/main.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

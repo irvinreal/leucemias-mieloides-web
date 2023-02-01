@@ -25,4 +25,3 @@ a_que_es_la_leucemia.addEventListener('click', function() {
 btn_close_section.addEventListener('click', function() {
     section_que_es_la_leucemia.style.display = 'none'
 })
-
