@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Solitreo&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
 img.img {
     width: 50vw !important;
 }
@@ -7,5 +14,23 @@ img.img {
 }
 
 .fs-7 {
-    font-size: .8rem;
+    font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lora", serif;
+}
+
+.btn-subir {
+    transition: .4s;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.733);
+}
+
+.btn-subir:hover {
+    text-shadow: 0 0 7px rgba(252, 252, 252, 0.733);
+    background-color: rgb(7, 235, 235) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lora", serif;
 }

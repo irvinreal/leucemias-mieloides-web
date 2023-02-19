@@ -8,16 +8,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
         />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-            crossorigin="anonymous"
-        />
+        <link rel="stylesheet" href="./public/css/custom.css" />
         <link rel="stylesheet" href="./styles/main.css" />
         <link
             rel="shortcut icon"
-            href="./assets/imgs/tema-principal/medicallabs-icon.png"
+            href="./assets/imgs/tema-principal/medicallabs-img.jpg"
             type="image/x-icon"
         />
         <title>Leucemias Meloides</title>
@@ -26,7 +21,9 @@
         <main id="main">
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand ms-5" href="index.html">Leucemias Mieloides</a>
+                    <a class="navbar-brand ms-5" href="index.html"
+                        >Leucemias Mieloides</a
+                    >
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -71,7 +68,11 @@
                                     >
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="bibliografias.html">Bibliografías</a>
+                                    <a
+                                        class="nav-link"
+                                        href="bibliografias.html"
+                                        >Bibliografías</a
+                                    >
                                 </li>
                                 <li class="nav-item">
                                     <a
@@ -81,30 +82,44 @@
                                     >
                                 </li>
                             </ul>
-                            <form class="d-flex" role="search">
+                            <form class="d-flex me-5" role="search" id="form">
                                 <input
                                     class="form-control me-2"
                                     type="search"
-                                    placeholder="Search"
+                                    placeholder="Buscar Clasificación"
                                     aria-label="Search"
                                 />
                                 <button
-                                    class="btn btn-outline-success"
+                                    class="btn btn-outline-info"
                                     type="submit"
                                 >
-                                    Search
+                                    Buscar
                                 </button>
+                                
                             </form>
+                            <ul class="list-group buscador">
+                            </ul>
                         </div>
                     </div>
                 </div>
             </nav>
             <div class="container" style="height: 90%">
                 <div
-                    class="row justify-content-center align-items-center"
+                    class="row justify-content-center align-items-center position-relative"
                     style="height: 100%"
                 >
-                    <div class="col-8 text-center">
+                    <div class="col img-box-left">
+                        <img
+                            src="./assets/imgs/tema-principal/bacteria-3.jpg"
+                            alt=""
+                            style="width: 20rem"
+                            class="img-left"
+                        />
+                    </div>
+                    <div
+                        class="col text-center contenedor-lista-a-main"
+                        id="contenedor-lista-a-main"
+                    >
                         <div class="row justify-content-center">
                             <h1 class="mb-3 text-center">
                                 Leucemias Mieloides
@@ -114,18 +129,61 @@
                             <div class="col">
                                 <a
                                     href="#section-que-es-la-leucemia"
-                                    id="a-que-es-la-leucemia"
                                     class="text-center"
+                                    id="a-que-es-la-leucemia-main"
                                     >¿Qué es la Leucemia?</a
                                 >
                             </div>
                         </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <a
+                                    href="#section-tipos"
+                                    class="text-center"
+                                    id="a-tipos-main"
+                                    >Tipos</a
+                                >
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <a
+                                    href="#section-sintomatologia"
+                                    class="text-center"
+                                    id="a-sintomatologia-main"
+                                    >Sintomatología</a
+                                >
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <a
+                                    href="#section-cuadro-clinico"
+                                    class="text-center"
+                                    id="a-cuadro-clinico-main"
+                                    >Cuadro clínico del LMC Y LMA</a
+                                >
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <a
+                                    href="#section-pruebas-de-laboratorio"
+                                    class="text-center"
+                                    id="a-pruebas-de-laboratorio-main"
+                                    >Pruebas de Laboratorio en el LMC y LMA</a
+                                >
+                            </div>
+                        </div>
                     </div>
+                    <div class="col"></div>
                 </div>
             </div>
         </main>
+
+        <!-- section QUE ES LA LEUCEMIA -->
         <section
-            class="container"
+            class="container section"
             style="height: 100vh"
             id="section-que-es-la-leucemia"
         >
@@ -135,9 +193,12 @@
             >
                 <div class="col">
                     <div
-                        class="row justify-content-center align-items-center mt-5 mx-5"
+                        class="row justify-content-center align-items-center mt-5 mx-1"
                     >
-                        <div class="col-12 text-center">
+                        <div class="col text-center">
+                            <h4 class="mb-5">
+                                ¿Qué es la Leucemia?
+                            </h4>
                             <p class="fs-6">
                                 Son cánceres que se origina en las células que
                                 normalmente madurarían hacia los diferentes
@@ -162,7 +223,7 @@
                         <div class="col-10 text-end">
                             <button
                                 type="button"
-                                class="btn close-section"
+                                class="btn btn-close-section"
                                 id="btn-close-section"
                             >
                                 <i
@@ -176,6 +237,245 @@
                 </div>
             </div>
         </section>
+
+        <!-- section TIPOS -->
+        <section class="container section" style="height: 100vh" id="section-tipos">
+            <div
+                class="row justify-content-center align-items-center"
+                style="height: 100%"
+            >
+                <div class="col">
+                    <div
+                        class="row justify-content-center align-items-center mt-5 mx-1"
+                    >
+                        <div class="col text-center">
+                            <h4 class="mb-5">
+                                Usualmente los síntomas se derivan de:
+                            </h4>
+                            <p class="fs-6">
+                                Son cánceres que se origina en las células que
+                                normalmente madurarían hacia los diferentes
+                                tipos de células sanguíneas. Con más frecuencia,
+                                la leucemia se origina en formas tempranas de
+                                glóbulos blancos, pero algunas leucemias
+                                comienzan en otros tipos de células sanguíneas.
+                                Existen varios tipos de leucemia que se dividen
+                                basándose principalmente en la leucemia es aguda
+                                (crecimiento acelerado) o crónica (crecimiento
+                                más lento), y si se inicia en células mieloides
+                                o células linfoides.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <p class="text-center">
+                            (American Cancer Society, 2018)
+                        </p>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-10 text-end">
+                            <button
+                                type="button"
+                                class="btn btn-close-section"
+                                id="btn-close-section"
+                            >
+                                <i
+                                    class="bi bi-chevron-double-up"
+                                    id="icon-close-section"
+                                    ><span class="ms-2 bold">Cerrar</span></i
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section SINTOMATOLOGIA -->
+        <section
+            class="container section"
+            style="height: 100vh"
+            id="section-sintomatologia"
+        >
+            <div
+                class="row justify-content-center align-items-center"
+                style="height: 100%"
+            >
+                <div class="col">
+                    <div
+                        class="row justify-content-center align-items-center mt-5 mx-1"
+                    >
+                        <div class="col text-center">
+                            <h4 class="mb-5">
+                                Usualmente los síntomas se derivan de:
+                            </h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Leucopenia</li>
+                                <li class="list-group-item">Leucocitosis</li>
+                                <li class="list-group-item">Anemia</li>
+                                <li class="list-group-item">
+                                    Disfunción leucocítica
+                                </li>
+                                <li class="list-group-item">Trombocitopenia</li>
+                                <li class="list-group-item">
+                                    Fatiga es una característica principal
+                                </li>
+                                <li class="list-group-item">
+                                    En pocas ocasiones se presenta fiebre sin o
+                                    con infección
+                                </li>
+                                <li class="list-group-item">
+                                    Es común presentar hemostasia anormal
+                                </li>
+                                <li class="list-group-item">Dolor óseo</li>
+                                <li class="list-group-item">Cefaleas</li>
+                                <li class="list-group-item">Linfadenopatía</li>
+                                <li class="list-group-item">
+                                    Tos inespecífica
+                                </li>
+                                <li class="list-group-item">Diaforesis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <p class="text-center d-none">
+                            (American Cancer Society, 2018)
+                        </p>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-10 text-end">
+                            <button
+                                type="button"
+                                class="btn btn-close-section"
+                                id="btn-close-section"
+                            >
+                                <i
+                                    class="bi bi-chevron-double-up"
+                                    id="icon-close-section"
+                                    ><span class="ms-2 bold">Cerrar</span></i
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section CUADRO CLINICO -->
+        <section
+            class="container section"
+            style="height: 100vh"
+            id="section-cuadro-clinico"
+        >
+            <div
+                class="row justify-content-center align-items-center"
+                style="height: 100%"
+            >
+                <div class="col">
+                    <div
+                        class="row justify-content-center align-items-center mt-5 mx-1"
+                    >
+                        <div class="col text-center">
+                            <h4 class="mb-5">
+                                Usualmente los síntomas se derivan de:
+                            </h4>
+                            <p class="fs-6">
+                                Son cánceres que se origina en las células que
+                                normalmente madurarían hacia los diferentes
+                                tipos de células sanguíneas. Con más frecuencia,
+                                la leucemia se origina en formas tempranas de
+                                glóbulos blancos, pero algunas leucemias
+                                comienzan en otros tipos de células sanguíneas.
+                                Existen varios tipos de leucemia que se dividen
+                                basándose principalmente en la leucemia es aguda
+                                (crecimiento acelerado) o crónica (crecimiento
+                                más lento), y si se inicia en células mieloides
+                                o células linfoides.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <p class="text-center">
+                            (American Cancer Society, 2018)
+                        </p>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-10 text-end">
+                            <button
+                                type="button"
+                                class="btn btn-close-section"
+                                id="btn-close-section"
+                            >
+                                <i
+                                    class="bi bi-chevron-double-up"
+                                    id="icon-close-section"
+                                    ><span class="ms-2 bold">Cerrar</span></i
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section PRUEBAS DE LABORATORIO -->
+        <section
+            class="container section"
+            style="height: 100vh"
+            id="section-pruebas-de-laboratorio"
+        >
+            <div
+                class="row justify-content-center align-items-center"
+                style="height: 100%"
+            >
+                <div class="col">
+                    <div
+                        class="row justify-content-center align-items-center mt-5 mx-1"
+                    >
+                        <div class="col text-center">
+                            <h4 class="mb-5">
+                                Usualmente los síntomas se derivan de:
+                            </h4>
+                            <p class="fs-6">
+                                Son cánceres que se origina en las células que
+                                normalmente madurarían hacia los diferentes
+                                tipos de células sanguíneas. Con más frecuencia,
+                                la leucemia se origina en formas tempranas de
+                                glóbulos blancos, pero algunas leucemias
+                                comienzan en otros tipos de células sanguíneas.
+                                Existen varios tipos de leucemia que se dividen
+                                basándose principalmente en la leucemia es aguda
+                                (crecimiento acelerado) o crónica (crecimiento
+                                más lento), y si se inicia en células mieloides
+                                o células linfoides.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <p class="text-center">
+                            (American Cancer Society, 2018)
+                        </p>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-10 text-end">
+                            <button
+                                type="button"
+                                class="btn btn-close-section"
+                                id="btn-close-section"
+                            >
+                                <i
+                                    class="bi bi-chevron-double-up"
+                                    id="icon-close-section"
+                                    ><span class="ms-2 bold">Cerrar</span></i
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section LEUCEMIA MIELOIDE AGUDA -->
         <section class="container" style="height: 100vh">
             <div
                 class="row justify-content-center-center align-items-center"
@@ -184,62 +484,12 @@
                 <div class="col">
                     <div class="row justify-content-center">
                         <div class="col-10">
-                            <h1 class="mb-5 text-center">
-                                Leucemia mieloide crónica
-                            </h1>
-                        </div>
-                        <!-- <h2 class="fs-5">(Ilustracion)</h2> -->
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-10">
-                            <p class="text-center">
-                                Se produce un cambio genético en una versión
-                                temprana (inmadura) de células mieloides (las
-                                células que producen glóbulos rojos, plaquetas,
-                                y la mayoría de los tipos de glóbulos blancos
-                                (excepto linfocitos). Este cambio forma un gen
-                                anormal llamado BCR- ABL, que convierte la
-                                célula en una célula CML.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="text-center">
-                                (American Cancer Society, 2018)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col text-center">
-                            <a
-                                href="leucemia-mieloide-cronica.html"
-                                id="a-que-es-la-leucemia"
-                                class="text-center"
-                                >Ver más</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section
-            class="container"
-            style="height: 100vh; border-top: 1px solid black"
-        >
-            <div
-                class="row justify-content-center-center align-items-center"
-                style="height: 100%"
-            >
-                <div class="col">
-                    <div class="row justify-content-center">
-                        <div class="col-10">
-                            <h1 class="text-center">Leucemia mieloide aguda</h1>
+                            <h1 class="text-center">Leucemia Mieloide Aguda</h1>
                         </div>
                         <!-- <h2 class="fs-5">(Ilustracion)</h2> -->
                     </div>
                     <div class="row justify-content-center mt-4">
-                        <div class="col-9">
+                        <div class="col-11">
                             <p class="text-center">
                                 La leucemia mieloide aguda se inicia en la
                                 médula ósea (la parte blanda del interior de
@@ -263,7 +513,54 @@
                             <a
                                 href="leucemia-mieloide-aguda.html"
                                 id="a-que-es-la-leucemia"
-                                class="text-center"
+                                class="text-center ver-mas"
+                                >Ver más</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="height: 100vh">
+            <div
+                class="row justify-content-center-center align-items-center"
+                style="height: 100%; border-top: 1px solid black"
+            >
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h1 class="mb-5 text-center">
+                                Leucemia Mieloide Crónica
+                            </h1>
+                        </div>
+                        <!-- <h2 class="fs-5">(Ilustracion)</h2> -->
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-11">
+                            <p class="text-center">
+                                Se produce un cambio genético en una versión
+                                temprana (inmadura) de células mieloides (las
+                                células que producen glóbulos rojos, plaquetas,
+                                y la mayoría de los tipos de glóbulos blancos
+                                (excepto linfocitos). Este cambio forma un gen
+                                anormal llamado BCR- ABL, que convierte la
+                                célula en una célula CML.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-center">
+                                (American Cancer Society, 2018)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col text-center">
+                            <a
+                                href="leucemia-mieloide-cronica.html"
+                                class="text-center ver-mas"
                                 >Ver más</a
                             >
                         </div>
@@ -312,11 +609,12 @@
                 ></a>
             </div>
         </section> -->
-        <script src="./scripts/main.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"
         ></script>
+        <script src="./scripts/main.js"></script>
+
     </body>
 </html>

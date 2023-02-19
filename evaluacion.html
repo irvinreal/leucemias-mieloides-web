@@ -8,26 +8,24 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
         />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-            crossorigin="anonymous"
-        />
+        <link rel="stylesheet" href="./public/css/custom.css" />
         <link rel="stylesheet" href="./styles/evaluacion.css" />
-        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/main.css">
         <link
             rel="shortcut icon"
-            href="./assets/imgs/tema-principal/medicallabs-icon.png"
+            href="./assets/imgs/tema-principal/medicallabs-img.jpg"
             type="image/x-icon"
         />
         <title>Evaluación</title>
     </head>
+
     <body>
-        <main>
+        <section id="main">
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand ms-5" href="index.html">Leucemias Mieloides</a>
+                    <a class="navbar-brand ms-5" href="index.html"
+                        >Leucemias Mieloides</a
+                    >
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -46,11 +44,11 @@
                         <div class="offcanvas-header">
                             <a href="index.html">
                                 <h5
-                                class="offcanvas-title"
-                                id="offcanvasNavbarLabel"
-                            >
-                            Leucemias Mieloides
-                            </h5>
+                                    class="offcanvas-title"
+                                    id="offcanvasNavbarLabel"
+                                >
+                                    Leucemias Mieloides
+                                </h5>
                             </a>
                             <button
                                 type="button"
@@ -64,7 +62,19 @@
                                 class="navbar-nav justify-content-center flex-grow-1 pe-3 gap-3"
                             >
                                 <li class="nav-item">
-                                    <a class="nav-link" href="bibliografias.html">Bibliografías</a>
+                                    <a
+                                        class="nav-link active"
+                                        aria-current="page"
+                                        href="evaluacion.html"
+                                        >Evaluación</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        href="bibliografias.html"
+                                        >Bibliografías</a
+                                    >
                                 </li>
                                 <li class="nav-item">
                                     <a
@@ -74,18 +84,18 @@
                                     >
                                 </li>
                             </ul>
-                            <form class="d-flex" role="search">
+                            <form class="d-flex me-5" role="search">
                                 <input
                                     class="form-control me-2"
                                     type="search"
-                                    placeholder="Search"
+                                    placeholder="Buscar Clasificación"
                                     aria-label="Search"
                                 />
                                 <button
-                                    class="btn btn-outline-success"
+                                    class="btn btn-outline-info"
                                     type="submit"
                                 >
-                                    Search
+                                    Buscar
                                 </button>
                             </form>
                         </div>
@@ -93,88 +103,383 @@
                 </div>
             </nav>
             <!-- Aquí termina la barra de navegación -->
-            <div class="container justify-content-center" style="height: 90%">
-                <div class="row mt-5">
-                    <h1 class="text-center mt-5 mb-5">Evaluación</h1>
+        </section>
+        <section>
+            <div
+                class="container justify-content-center py-5 bg-gray"
+                style="height: 100%"
+            >
+                <div class="row">
+                    <h1 class="text-center my-5">Evaluación</h1>
                 </div>
                 <!-- Se muestra el Resultado de la evaluación -->
-                <div class="row justify-content-center resultado">
-                    <div class="col-8">resultado:</div>
-                </div>
-                <!-- Aquí comienza el Formulario -->
                 <div class="row justify-content-center">
                     <div class="col-8">
-                        <form
-                            name="quizForm"
-                            onsubmit="return verificarRespuestas()"
-                            id="form"
+                        <div
+                            class="alert alert-info text-center off"
+                            role="alert"
                         >
-                            <div class="row my-3">
-                                <h5>¿Qué es una leucemia?</h5>
-                            </div>
-                            <div class="form-check mb-3">
-                                <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="r1"
-                                    value="a"
-                                    id="flexRadioDefault1"
-                                />
-                                <label
-                                    class="form-check-label"
-                                    for="flexRadioDefault1"
+                            <h4 class="resultado text-center">Resultado:</h4>
+                        </div>
+                        <div class="row justify-content-end alert-btns off">
+                            <div class="col-5">
+                                <a
+                                    href="index.html"
+                                    class="btn btn-info actived"
+                                    >Regresar a la Página principal</a
                                 >
-                                    A) Es un grupo heterogéneo de neoplasias
-                                    clonales que surgen de la transformación
-                                    maligna de las células hematopoyéticas.
-                                </label>
                             </div>
-                            <div class="form-check mb-3">
-                                <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="r1"
-                                    value="b"
-                                    id="flexRadioDefault2"
-                                />
-                                <label
-                                    class="form-check-label"
-                                    for="flexRadioDefault2"
+                            <div class="col-4">
+                                <a
+                                    href="evaluacion.html"
+                                    class="btn btn-info"
+                                    >Iniciar Nuevamente</a
                                 >
-                                    B) Enfermedad que se presenta cuando en la
-                                    sangre no hay un número suficiente de
-                                    hematíes, o glóbulos rojos, para realizar un
-                                    adecuado transporte de oxígeno a los tejidos
-                                    corporales o su función es deficiente en
-                                    algún sentido.
-                                </label>
                             </div>
-                            <div class="form-check mb-3">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center px-3 mb-5">
+                        <div class="col-lg-10">
+                            <form name="quizForm" id="form">
+                                <!-- Pregunta 1 -->
+                                <div class="row div-pregunta my-4">
+                                    <div class="col">
+                                        <div class="row my-3">
+                                            <div class="col">
+                                                <h5>
+                                                    1- ¿Qué es una leucemia?
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r1"
+                                                value="a"
+                                                id="flexRadioDefault1"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault1"
+                                            >
+                                                A) Es un grupo heterogéneo de
+                                                neoplasias clonales que surgen
+                                                de la transformación maligna de
+                                                las células hematopoyéticas.
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r1"
+                                                value="b"
+                                                id="flexRadioDefault2"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault2"
+                                            >
+                                                B) Enfermedad que se presenta
+                                                cuando en la sangre no hay un
+                                                número suficiente de hematíes, o
+                                                glóbulos rojos, para realizar un
+                                                adecuado transporte de oxígeno a
+                                                los tejidos corporales o su
+                                                función es deficiente en algún
+                                                sentido.
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r1"
+                                                value="c"
+                                                id="flexRadioDefault3"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault3"
+                                            >
+                                                C) Proceso inflamatorio agudo de
+                                                las leptomeninges ocasionado por
+                                                bacterias; cursa típicamente con
+                                                líquido cefalorraquídeo (LCR)
+                                                turbio o purulento, con intensa
+                                                pleocitosis y claro predominio
+                                                de poli- morfonucleares.
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div
+                                                class="col text-end resultado-respuesta"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 2 -->
+                                <div class="row div-pregunta my-4">
+                                    <div class="col">
+                                        <div class="row my-3">
+                                            <div class="col">
+                                                <h5>
+                                                    2- ¿Cuáles son los síntomas
+                                                    de manera general de un
+                                                    paciente con Leucemia
+                                                    Mieloide Aguda?
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r2"
+                                                value="a"
+                                                id="flexRadioDefault1"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault1"
+                                            >
+                                                A) Síntomas son consecuencias de
+                                                leucopenia, leucocitosis,
+                                                anemia, disfunción leucocítica o
+                                                trombocitopenia. La fatiga es
+                                                una característica principal.
+                                                Pérdida de peso y anorexia van
+                                                en conjunto. En pocas ocasiones
+                                                se presenta fiebre sin o con
+                                                infección. Es común presentar
+                                                hemostasia anormal. Dolor óseo,
+                                                cefaleas, linfadenopatía, tos
+                                                inespecífica e incluso
+                                                diaforesis.
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r2"
+                                                value="b"
+                                                id="flexRadioDefault2"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault2"
+                                            >
+                                                B) Sudores nocturnos, debilidad,
+                                                cansancio excesivo,
+                                                agrandamiento del bazo debido a
+                                                la propagación de las células
+                                                leucémicas de la cavidad de la
+                                                médula a la superficie de los
+                                                huesos o a las articulaciones,
+                                                sensación de llenura en el
+                                                estómago.
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r2"
+                                                value="c"
+                                                id="flexRadioDefault3"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault3"
+                                            >
+                                                C) Cefalea, cansancio, Nódulo en
+                                                el cuello.
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div
+                                                class="col text-end resultado-respuesta"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 3 -->
+                                <div class="row div-pregunta my-4">
+                                    <div class="col">
+                                        <div class="row my-3">
+                                            <div class="col">
+                                                <h5>
+                                                    3- Una evolución lenta,
+                                                    pacientes asintomáticos,
+                                                    manifestación de anemia y
+                                                    esplenomegalia son
+                                                    características de la
+                                                    siguiente neoplasia:
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r3"
+                                                value="a"
+                                                id="flexRadioDefault1"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault1"
+                                            >
+                                                A) Leucemia Mieloide Aguda
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r3"
+                                                value="b"
+                                                id="flexRadioDefault2"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault2"
+                                            >
+                                                B) Leucemia Mieloide Crónica
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r3"
+                                                value="c"
+                                                id="flexRadioDefault3"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault3"
+                                            >
+                                                C) Leucemia Linfoblástica Aguda
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div
+                                                class="col text-end resultado-respuesta"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 4 -->
+                                <div class="row div-pregunta my-4">
+                                    <div class="col">
+                                        <div class="row my-3">
+                                            <div class="col">
+                                                <h5>
+                                                    4- ¿Cuál concepto
+                                                    corresponde a una Leucemia
+                                                    Mieloide Crónica?
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r4"
+                                                value="a"
+                                                id="flexRadioDefault1"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault1"
+                                            >
+                                                A) Enfermedad neoplásica
+                                                caracterizada por la
+                                                infiltración de la sangre,
+                                                médula ósea y otros tejidos por
+                                                la proliferación de células
+                                                clonales no diferenciadas del
+                                                sistema hemopoyético.
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r4"
+                                                value="b"
+                                                id="flexRadioDefault2"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault2"
+                                            >
+                                                B) Es un trastorno clonal de las
+                                                células madre hematopoyéticas.
+                                                La enfermedad es causada por
+                                                productos génicos quiméricos de
+                                                BCR-ABLl, una tirosina cinasa
+                                                constitutivamente activa, una
+                                                consecuencia de la translocación
+                                                equilibrada recíproca entre los
+                                                brazos largos de los cromosomas
+                                                9 y 22.
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="r4"
+                                                value="c"
+                                                id="flexRadioDefault3"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="flexRadioDefault3"
+                                            >
+                                                C) Clona maligna que surge de
+                                                células progenitoras
+                                                hematopoyéticas en la médula
+                                                ósea o el sistema linfático y
+                                                produce un aumento de células
+                                                leucémicas no funcionales
+                                                inmaduras
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div
+                                                class="col text-end resultado-respuesta"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Botón enviar -->
                                 <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="r1"
-                                    value="c"
-                                    id="flexRadioDefault3"
+                                    type="submit"
+                                    class="btn btn-info mb-5"
+                                    id="btn-enviar"
                                 />
-                                <label
-                                    class="form-check-label"
-                                    for="flexRadioDefault3"
-                                >
-                                    C) Proceso inflamatorio agudo de las
-                                    leptomeninges ocasionado por bacterias;
-                                    cursa típicamente con líquido
-                                    cefalorraquídeo (LCR) turbio o purulento,
-                                    con intensa pleocitosis y claro predominio
-                                    de poli- morfonucleares.
-                                </label>
+                            </form>
+                            <div class="row">
+                                <div class="col">
+                                    <h6 id="enviando-respuestas">
+                                        Enviando respuestas ..
+                                    </h6>
+                                </div>
                             </div>
-                            <input type="submit" class="btn btn-primary" />
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
         <script src="./scripts/evaluacion.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
