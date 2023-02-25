@@ -171,12 +171,17 @@ ul a:hover {
     animation: none;
 }
 
-.img-box-left {
+/* .img-box-left {
     z-index: 10;
-}
+    position: relative;
+    left: -125px;
+    top: 10px;
+} */
 
 .img-left {
-    border-radius: 10px !important;
+    width: 24vw;
+    opacity: .7;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.432);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -203,9 +208,46 @@ h1, h2, h3, h4, h5, h6 {
     transition: .6s ease-in-out all;
 }
 
-.buscando {
+.menu {
     position: absolute;
-    right: 20rem;
-    top: 3.4rem;
-    z-index: 1000;
+    top: -8rem;
+    right: -14rem;
+    z-index: 10000;
+}
+
+.buscando {
+    position: relative;
+    right: 23.4rem;
+    top: 12rem;
+    z-index: 100;
+    width: 14rem;
+}
+
+.fs-7 {
+    font-size: 14px;
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: inline-block;
+}
+
+.on-title {
+    font-weight: bold;
+}
+
+.on-parrafo {
+    display: inline;
+}
+
+.first-main-section {
+    background: linear-gradient(180deg, rgb(177, 177, 177) 0%, rgb(255, 255, 255) 40%);
+
+}
+
+.details {
+    cursor: pointer;
 }

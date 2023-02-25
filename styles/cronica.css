@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Solitreo&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lora", serif;
+}
+
+.fs-7 {
+    font-size: 0.8rem;
+}
+
+img.img {
+    width: 50vw !important;
+}

@@ -44,6 +44,9 @@ contendor_lista_a_main.addEventListener("click", (e) => {
         // const sect = document.querySelector(section)
         // console.log(sect)
         // sect.classList.add('aparecer')
+        if ((document.querySelector(section).style.display = "block")) {
+            document.querySelector(section).style.display = "block";
+        }
     }
 });
 
@@ -62,7 +65,7 @@ const ocultarSection = (entradas, observador) => {
     entradas.forEach((entrada) => {
         if (entrada.isIntersecting) {
             // console.log("La imagen salió del viewport");
-            console.log(entrada.target);
+            // console.log(entrada.target);
             entrada.target.classList.add("aparecer");
         } else {
             // console.log("Saliendo..");
@@ -76,58 +79,33 @@ const ocultarSection = (entradas, observador) => {
 const observador = new IntersectionObserver(ocultarSection, {
     root: null,
     rootMargin: "0px 0px 0px 0px",
-    threshold: 0.7,
+    threshold: 0.1,
 });
 
 section.forEach((element) => {
     observador.observe(element);
 });
 
-// const clasificacion_lma = [
-//     { nombre: "LAM0" },
-//     { nombre: "LAM1" },
-//     { nombre: "LAM2" },
-//     { nombre: "LAM3" },
-//     { nombre: "LAM4" },
-//     { nombre: "LAM5" },
-//     { nombre: "LAM6" },
-//     { nombre: "LAM7" },
-// ];
+// const tipos_tipo_a = document.getElementsByClassName("tipos-tipo-a");
 
-const clasificacion_lma = ["LAM0", "LAM1", "LAM2", "LAM3", "LAM4", "LAM5", "LAM6", "LAM7"];
+// tipos_tipo_a.addEventListener("click", (e) => {
+//     console.log(e);
+//     console.log("click");
+// });
 
-const search = document.querySelector(".form-control");
-const btnSubmit = document.querySelector(".btn-outline-info");
-const form = document.getElementById("form");
-const buscador = document.querySelector(".buscador");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+const tipos_tipo_parr = document.querySelectorAll(".tipos-tipo-parr");
+const details = document.querySelectorAll(".details");
+const list_tipo = document.querySelector(".list-tipo");
+
+list_tipo.addEventListener("click", (e) => {
+    if (e.target && e.target.tagName === "A") {
+        e.preventDefault()
+        let section = document.querySelector(e.target.hash);
+        // console.log(tipos_tipo_parr);
+        tipos_tipo_parr.forEach((element) => {
+            // console.log(element);
+            element.classList.remove("on");
+        });
+        section.classList.toggle("on");
+    }
 });
-
-const filtrar = () => {
-    // buscador.innerHTML = "";
-    // console.log(search.value);
-    const buscarTexto = search.value.toUpperCase();
-    // console.log(buscarTexto)
-    // for (let lma of clasificacion_lma) {
-    //     const nombre = lma.nombre
-    //     console.log(nombre);
-    //     if (buscarTexto == nombre) {
-    //         buscador.innerHTML += `<li class="list-group-item buscando">${nombre}</li>`;
-    //     }
-    // }
-    for (let i = 0; i < clasificacion_lma.length; i++) {
-        const lma = clasificacion_lma[i];
-        if (buscarTexto == lma) {
-            console.log(buscarTexto)
-            console.log(lma)
-            buscador.innerHTML += `<li class="list-group-item buscando">${lma}</li>`;
-        }
-    }
-
-    if ((buscador.innerHTML = "")) {
-        buscador.innerHTML += `<li class="list-group-item buscando">No se ha encontrado resultado</li>`;
-    }
-};
-
-btnSubmit.addEventListener("click", filtrar);

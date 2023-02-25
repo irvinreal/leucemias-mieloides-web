@@ -18,7 +18,7 @@
         <title>Leucemias Meloides</title>
     </head>
     <body>
-        <main id="main">
+        <main id="main" class="first-main-section">
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand ms-5" href="index.html"
@@ -62,9 +62,15 @@
                                 <li class="nav-item">
                                     <a
                                         class="nav-link active"
-                                        aria-current="page"
                                         href="evaluacion.html"
                                         >Evaluación</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link"
+                                        href="glosario.html"
+                                        >Glosario</a
                                     >
                                 </li>
                                 <li class="nav-item">
@@ -82,45 +88,28 @@
                                     >
                                 </li>
                             </ul>
-                            <form class="d-flex me-5" role="search" id="form">
-                                <input
-                                    class="form-control me-2"
-                                    type="search"
-                                    placeholder="Buscar Clasificación"
-                                    aria-label="Search"
-                                />
-                                <button
-                                    class="btn btn-outline-info"
-                                    type="submit"
-                                >
-                                    Buscar
-                                </button>
-                                
-                            </form>
-                            <ul class="list-group buscador">
-                            </ul>
                         </div>
                     </div>
                 </div>
             </nav>
+            <!-- <div class="menu"><ul class="list-group buscador"></ul></div> -->
             <div class="container" style="height: 90%">
                 <div
-                    class="row justify-content-center align-items-center position-relative"
+                    class="row align-items-center justify-content-between position-relative pt-5"
                     style="height: 100%"
                 >
-                    <div class="col img-box-left">
+                    <div class="col-lg-2 img-box-left me-5">
                         <img
-                            src="./assets/imgs/tema-principal/bacteria-3.jpg"
-                            alt=""
-                            style="width: 20rem"
+                            src="./assets/imgs/tema-principal/lma-inicio.png"
+                            alt="anuncio"
                             class="img-left"
                         />
                     </div>
                     <div
-                        class="col text-center contenedor-lista-a-main"
+                        class="col text-center contenedor-lista-a-main pt-5"
                         id="contenedor-lista-a-main"
                     >
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center mt-4">
                             <h1 class="mb-3 text-center">
                                 Leucemias Mieloides
                             </h1>
@@ -176,7 +165,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col"></div>
                 </div>
             </div>
         </main>
@@ -196,9 +184,7 @@
                         class="row justify-content-center align-items-center mt-5 mx-1"
                     >
                         <div class="col text-center">
-                            <h4 class="mb-5">
-                                ¿Qué es la Leucemia?
-                            </h4>
+                            <h4 class="mb-5">¿Qué es la Leucemia?</h4>
                             <p class="fs-6">
                                 Son cánceres que se origina en las células que
                                 normalmente madurarían hacia los diferentes
@@ -239,32 +225,231 @@
         </section>
 
         <!-- section TIPOS -->
-        <section class="container section" style="height: 100vh" id="section-tipos">
-            <div
-                class="row justify-content-center align-items-center"
-                style="height: 100%"
-            >
+        <section
+            class="container section pb-5"
+            id="section-tipos"
+        >
+            <div class="row justify-content-center align-items-center">
                 <div class="col">
                     <div
                         class="row justify-content-center align-items-center mt-5 mx-1"
                     >
-                        <div class="col text-center">
-                            <h4 class="mb-5">
-                                Usualmente los síntomas se derivan de:
+                        <div class="col-8">
+                            <h4 class="my-5 text-center">
+                                Tipos (Clasificación Francesa):
                             </h4>
-                            <p class="fs-6">
-                                Son cánceres que se origina en las células que
-                                normalmente madurarían hacia los diferentes
-                                tipos de células sanguíneas. Con más frecuencia,
-                                la leucemia se origina en formas tempranas de
-                                glóbulos blancos, pero algunas leucemias
-                                comienzan en otros tipos de células sanguíneas.
-                                Existen varios tipos de leucemia que se dividen
-                                basándose principalmente en la leucemia es aguda
-                                (crecimiento acelerado) o crónica (crecimiento
-                                más lento), y si se inicia en células mieloides
-                                o células linfoides.
-                            </p>
+                            <ul class="list-group mt-4 list-tipo">
+                                <li class="list-group-item">
+                                    <a href="#lam0" class="details">LAM0 (mínimamente diferenciada).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam0">
+                                            Este subtipo de leucemia porta una
+                                            gran dificultad diagnostica desde el
+                                            punto de vista morfológico, ya que
+                                            los blastos presentan rasgos
+                                            morfológicos linfoides y mieloides,
+                                            este subtipo constituye únicamente
+                                            el 5% de las LAM en el adulto
+                                            (Merino, 2010, p. 140).
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam1" class="details">LAM1 (mieloblástica sin maduración).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam1">
+                                            Este subtipo frecuentemente se
+                                            observa un conformismo celular, con
+                                            presencia en sangre periférica de
+                                            blastos mieloides menor al 3% en
+                                            ausencia de otras células en
+                                            estadios siguientes al mieloblasto,
+                                            la morfología de los blastos es de
+                                            tamaño mediano, elevada relación
+                                            nucleocitoplasmática, cuenta con un
+                                            contorno nuclear redondeado, núcleo
+                                            de cromatina laxa e inmadura con
+                                            presencia de uno o varios nucleolos
+                                            prominentes (Merino, 2010, p. 140)
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam2" class="details">LAM2 (mieloblástica con maduración).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam2">
+                                            Este subtipo representa el 30% de
+                                            todos los casos de LAM y muestra
+                                            células en estadios madurativos
+                                            posteriores al mieloblasto en un
+                                            porcentaje superior al 10%. el
+                                            tamaño de los blastos es pequeño a
+                                            medianos, con una elevada relación
+                                            nucleocitoplasmática y un perfil
+                                            nuclear redondeado, que en algunos
+                                            casos adopta una posición
+                                            cuadrangular con respecto al
+                                            citoplasma, el núcleo muestra una
+                                            cromatina laxa e inmadura, con uno o
+                                            varios nucleolos visibles, de
+                                            citoplasma basófilo y puede o no
+                                            contener esbozos de granulación
+                                            primaria azurófila o en su lugar
+                                            rara vez algún bastón de Auer
+                                            (Merino, 2010, p. 141).
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam3" class="details">LAM3 (promielocítica).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam3">
+                                            Este subtipo suele acompañarse de
+                                            una cifra baja de leucocitos en
+                                            sangre periférica, lo que dificulta
+                                            su diagnóstico. Las células que
+                                            mayormente proliferan muestran una
+                                            morfología muy característica y se
+                                            nombran premiercitos atípicos o
+                                            hipergranulares, ocasionalmente
+                                            puede cursar accidentes hemorrágicos
+                                            de alta gravedad por coagulación
+                                            intravascular diseminada, los
+                                            premiercitos atípicos presentan una
+                                            granulación potentemente azurófila y
+                                            muy abundante. El núcleo normalmente
+                                            suele ser de aspecto monocitoide y
+                                            con perfil bilobulado con presencia
+                                            de una hendidura amplia, o bien de
+                                            perfil irregular, el citoplasma es
+                                            mínimamente basófilo debido al
+                                            elevado contenido de granulación
+                                            azurófila. Algunos de los
+                                            promielocitos atípicos contienen
+                                            inclusiones citoplasmáticas
+                                            cristalinas en forma de astillas
+                                            (alargadas), específicas de este
+                                            subtipo de leucemias, que
+                                            normalmente suelen disponerse en
+                                            cúmulos y que difieren de los
+                                            bastones de Auer por la detección de
+                                            una subestructura en forma de tubo
+                                            cuando se estudian mediante
+                                            microscopia electrónica de
+                                            transmisión (Merino, 2010, p. 141).
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam4" class="details">LAM4 (mielomonocítica).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam4">
+                                            Esta subclase se caracteriza por
+                                            tener un componente monocítico y
+                                            otro granulocítico, en diversas
+                                            proporciones variables y con
+                                            diversos grados de maduración, los
+                                            blastos monocíticos son de un gran
+                                            tamaño, de relación moderada núcleo-
+                                            citoplasmática y de basófilas
+                                            variables, el núcleo de este puede
+                                            ser irregular normalmente en forma
+                                            redondeado o arriñonado, los
+                                            nucleolos suelen ser de tamaño
+                                            prominente (Merino, 2010, p. 142).
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam5" class="details">LAM5 (monocítica).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam5">
+                                            Esta subclase constituye cerca de un
+                                            15% del total de las LAM, las
+                                            células leucémicas son de estirpe
+                                            monocítica esta subclase de LAM
+                                            incluye 2 subtipos.
+                                            (Subclasificación): LAM5a en esta
+                                            leucemia aguda monoblástica
+                                            predominan los monoblastos. LAM5b en
+                                            esta leucemia aguda monocítica en la
+                                            que se observan promonocitos y
+                                            monocitos en misma cantidad y
+                                            proporción elevada que los
+                                            monoblastos. LAM5a (monocítica) este
+                                            subtipo de LAM5 representa entre 5%
+                                            y 8% de las LAM, los elementos
+                                            blásticos son de un gran aspecto y
+                                            tamaño, el núcleo presenta un perfil
+                                            redondeado de cromatina laxa e
+                                            inmadura de 1 a 3 nucleolos y con un
+                                            citoplasma medianamente amplio y
+                                            altamente basófilo, en el citoplasma
+                                            se puede observar algún bastón de
+                                            Auer y en conjunto o en su lugar
+                                            prolongaciones o mamelones (Merino,
+                                            2010, p. 142). LAM5b (monocítica)
+                                            Este subtipo de LAM5 representa
+                                            entre un 3% y 6% de las LAM, en los
+                                            promonocitos se observa un núcleo de
+                                            perfil redondeado o en forma de
+                                            riñón, con un citoplasma de menor
+                                            basófila, con mayor contenido de
+                                            granulación que los monoblastos y
+                                            presencia de vacuolas dispersas
+                                            (Merino, 2010, p. 142).
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam6" class="details">LAM6 (eritroides).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam6">
+                                            Esta subclase ha sido definida por
+                                            la clasificación FAB
+                                            (francesa-americana-británica) como
+                                            “proliferación de elementos
+                                            eritroides displásicos” esto en
+                                            conjunto a una proliferación de
+                                            elementos blásticos de origen
+                                            mieloide, se han clasificados en dos
+                                            subtipos: LAM6a mejor conocida como
+                                            eritroleucemia, esta presenta una
+                                            proliferación blástica mixta entre
+                                            mieloide y eritroide. LAM6b esta
+                                            variante o leucemia eritroide pura
+                                            esto según la clasificación de la
+                                            OMS. LAM6a (eritroleucemia) Este
+                                            subtipo muestra una proliferación
+                                            leucémica de modo mixto de las
+                                            series eritroblástica y
+                                            granulocítica, representa un 5%-6%
+                                            de todos los casos de LAM, y existe
+                                            la posibilidad de que sea un
+                                            trastorno secundario a un síndrome
+                                            mielodisplásico previo, para que sea
+                                            diagnosticada se requiere de un 50%
+                                            o más de precursores eritroides de
+                                            la totalidad de las células y un 30%
+                                            de mieloblastos de las células no
+                                            eritroide (Merino, 2010, p. 143).
+                                            LAM6b variante (leucemia eritroide
+                                            pura) este tipo presenta más de un
+                                            80% de la celularidad de medula ósea
+                                            esta constituida por elementos
+                                            eritroides, mientras que los
+                                            componentes mieloides son inferiores
+                                            al 3%. este trastorno se asocia a
+                                            alteraciones importantes de la
+                                            morfología eritrocitaria en sangre
+                                            periférica, como lo son
+                                            macrocitosis, punteado basófilo,
+                                            cuerpos de Howell-Jolly o anillos de
+                                            Cabot (Merino, 2010, p. 143).
+                                        </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="#lam7" class="details">LAM7 (megacarioblástica).</a>
+                                        <p class="mt-2 tipos-tipo-parr off" id="lam7">
+                                            Representa un 3%-5% de las LAM, los
+                                            blastos presentan una morfología
+                                            inmadura y polimórfica, de núcleo
+                                            excéntrico, de cromatina laxa y
+                                            reticulada con 1 a 3 nucleolos de
+                                            gran tamaño, citoplasma basófilo a
+                                            granular y de aspecto similar a las
+                                            plaquetas con presencia de
+                                            mamelones.
+                                        </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="row mt-5">
@@ -292,11 +477,7 @@
         </section>
 
         <!-- section SINTOMATOLOGIA -->
-        <section
-            class="container section"
-            style="height: 100vh"
-            id="section-sintomatologia"
-        >
+        <section class="container section" id="section-sintomatologia">
             <div
                 class="row justify-content-center align-items-center"
                 style="height: 100%"
@@ -305,8 +486,8 @@
                     <div
                         class="row justify-content-center align-items-center mt-5 mx-1"
                     >
-                        <div class="col text-center">
-                            <h4 class="mb-5">
+                        <div class="col-8">
+                            <h4 class="my-5">
                                 Usualmente los síntomas se derivan de:
                             </h4>
                             <ul class="list-group list-group-flush">
@@ -362,11 +543,7 @@
         </section>
 
         <!-- section CUADRO CLINICO -->
-        <section
-            class="container section"
-            style="height: 100vh"
-            id="section-cuadro-clinico"
-        >
+        <section class="container section" id="section-cuadro-clinico">
             <div
                 class="row justify-content-center align-items-center"
                 style="height: 100%"
@@ -375,31 +552,100 @@
                     <div
                         class="row justify-content-center align-items-center mt-5 mx-1"
                     >
-                        <div class="col text-center">
-                            <h4 class="mb-5">
-                                Usualmente los síntomas se derivan de:
-                            </h4>
-                            <p class="fs-6">
-                                Son cánceres que se origina en las células que
-                                normalmente madurarían hacia los diferentes
-                                tipos de células sanguíneas. Con más frecuencia,
-                                la leucemia se origina en formas tempranas de
-                                glóbulos blancos, pero algunas leucemias
-                                comienzan en otros tipos de células sanguíneas.
-                                Existen varios tipos de leucemia que se dividen
-                                basándose principalmente en la leucemia es aguda
-                                (crecimiento acelerado) o crónica (crecimiento
-                                más lento), y si se inicia en células mieloides
-                                o células linfoides.
-                            </p>
+                        <div class="col">
+                            <h4 class="mt-5">Cuadro clínico</h4>
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="mb-4">LMC</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Esplenomegalia
+                                        </li>
+                                        <li class="list-group-item">Anemia</li>
+                                        <li class="list-group-item">
+                                            Síntomas similares (dolor abdominal,
+                                            pérdida de peso, fatiga), lo cual se
+                                            traduce en una frecuencia mayor de
+                                            CML de alto riesgo
+                                        </li>
+                                        <li class="list-group-item">Fatiga</li>
+                                        <li class="list-group-item">
+                                            Malestar general
+                                        </li>
+                                        <li class="list-group-item">
+                                            Pérdida de peso (si la carga de la
+                                            leucemia es elevada) o saciedad
+                                            precoz y dolor por tumoraciones del
+                                            cuadrante superior izquierdo del
+                                            abdomen (por la esplenomegalia)
+                                        </li>
+                                        <li class="list-group-item">
+                                            Manifestaciones menos comunes
+                                            incluyen eventos trombóticos
+                                        </li>
+                                        <li class="list-group-item bold">
+                                            Nota: Paciente puede ser
+                                            asintomático, por lo cual lleva un
+                                            desarrollo lento de la enfermedad.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <h6 class="mb-4">LMA</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Leucocitosis
+                                        </li>
+                                        <li class="list-group-item">
+                                            Consecuencias de anemia
+                                        </li>
+                                        <li class="list-group-item">
+                                            Disfunción leucocítica o
+                                            trombocitopenia
+                                        </li>
+                                        <li class="list-group-item">
+                                            La fatiga es una característica
+                                            principal
+                                        </li>
+                                        <li class="list-group-item">
+                                            Pérdida de peso y anorexia van en
+                                            conjunto
+                                        </li>
+                                        <li class="list-group-item">
+                                            En pocas ocasiones se presenta
+                                            fiebre sin o con infección
+                                        </li>
+                                        <li class="list-group-item">
+                                            Es común presentar hemostasia
+                                            anormal
+                                        </li>
+                                        <li class="list-group-item">
+                                            Dolor óseo, cefaleas
+                                        </li>
+                                        <li class="list-group-item">
+                                            Linfadenopatía
+                                        </li>
+                                        <li class="list-group-item">
+                                            Tos inespecífica
+                                        </li>
+                                        <li class="list-group-item">
+                                            Diaforesis
+                                        </li>
+                                        <li class="list-group-item bold">
+                                            Nota: síntomas no exclusivos de
+                                            leucemia mieloides agudas y
+                                            crónicas, es decir, no son
+                                            específicos.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-5">
-                        <p class="text-center">
-                            (American Cancer Society, 2018)
-                        </p>
+                        <p>(American Cancer Society, 2018)</p>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row mb-2">
                         <div class="col-10 text-end">
                             <button
                                 type="button"
@@ -419,11 +665,7 @@
         </section>
 
         <!-- section PRUEBAS DE LABORATORIO -->
-        <section
-            class="container section"
-            style="height: 100vh"
-            id="section-pruebas-de-laboratorio"
-        >
+        <section class="container section" id="section-pruebas-de-laboratorio">
             <div
                 class="row justify-content-center align-items-center"
                 style="height: 100%"
@@ -432,31 +674,91 @@
                     <div
                         class="row justify-content-center align-items-center mt-5 mx-1"
                     >
-                        <div class="col text-center">
-                            <h4 class="mb-5">
-                                Usualmente los síntomas se derivan de:
-                            </h4>
-                            <p class="fs-6">
-                                Son cánceres que se origina en las células que
-                                normalmente madurarían hacia los diferentes
-                                tipos de células sanguíneas. Con más frecuencia,
-                                la leucemia se origina en formas tempranas de
-                                glóbulos blancos, pero algunas leucemias
-                                comienzan en otros tipos de células sanguíneas.
-                                Existen varios tipos de leucemia que se dividen
-                                basándose principalmente en la leucemia es aguda
-                                (crecimiento acelerado) o crónica (crecimiento
-                                más lento), y si se inicia en células mieloides
-                                o células linfoides.
-                            </p>
+                        <div class="col">
+                            <h4 class="my-5">Pruebas de laboratorio</h4>
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="mb-4">LMC</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            Recuento de células sanguíneas
+                                        </li>
+                                        <li class="list-group-item">
+                                            Prueba de médula ósea 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Pruebas de química sanguínea 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Pruebas genéticas 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Citogenética convencional 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Hibridación in situ con
+                                            fluorescencia
+                                        </li>
+                                        <li class="list-group-item">
+                                            Reacción en cadena de la polimerasa
+                                            (PCR)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <h6 class="mb-4">LMA</h6>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            CBC con cuenta diferencial manual
+                                            Pruebas químicas: (electrólitos,
+                                            creatinina, BUN, calcio, fósforo,
+                                            ácido úrico, enzimas hepáticas,
+                                            bilirrubina, LDH, amilasa, lipasa)
+                                        </li>
+                                        <li class="list-group-item">
+                                            Pruebas de coagulación: (tiempo de
+                                            protrombina, tiempo parcial de
+                                            tromboplastina, fibrinógeno, dímero
+                                            D)
+                                        </li>
+                                        <li class="list-group-item">
+                                            Serología viral (CMV, HSV-1,
+                                            varicela-zóster)
+                                        </li>
+                                        <li class="list-group-item">
+                                            Tipo y tamiz de eritrocitos
+                                            Tipificación HLA para posible HCT
+                                            alogénico 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Aspirado y biopsia de médula ósea
+                                            (morfología, citogenética,
+                                            citometría de flujo, análisis
+                                            moleculares para mutaciones NPM1 y
+                                            CEBPA y FLT3-ITD)
+                                        </li>
+                                        <li class="list-group-item">
+                                            Crioconservación de células
+                                            leucémica viables 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Función miocárdica (ecocardiograma o
+                                            MUGA)
+                                        </li>
+                                        <li class="list-group-item">
+                                            Radiografía PA y lateral del tórax
+                                            Colocación de dispositivo para
+                                            acceso venoso central
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-5">
-                        <p class="text-center">
-                            (American Cancer Society, 2018)
-                        </p>
+                        <p>(American Cancer Society, 2018)</p>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row mb-5">
                         <div class="col-10 text-end">
                             <button
                                 type="button"
@@ -615,6 +917,5 @@
             crossorigin="anonymous"
         ></script>
         <script src="./scripts/main.js"></script>
-
     </body>
 </html>

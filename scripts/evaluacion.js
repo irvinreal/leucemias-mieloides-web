@@ -6,6 +6,7 @@ const myalertBtns = document.querySelector(".alert-btns");
 const resultado_respuesta = document.querySelectorAll(".resultado-respuesta");
 const enviando_respuestas = document.querySelector("#enviando-respuestas");
 
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 });
@@ -15,33 +16,25 @@ btn_enviar.addEventListener("click", () => {
 });
 
 function verificarRespuestas() {
-    var total = 4;
+    var total = 10;
     var puntos = 0;
 
     var myForm = document.forms["quizForm"];
-    var respuestas = ["a", "a", "b", "b"];
+    var respuestas = ["a", "a", "b", "b", "a", "a", "c", "a", "a", "b"];
 
     for (var i = 1; i <= total; i++) {
-        // (myForm["r" + i].value == null || myForm["r" + i].value == "")
         if (
-            myForm["r1" && "r2" && "r3" && "r4"].value == null ||
-            myForm["r1" && "r2" && "r3" && "r4"].value == ""
+            myForm["r1" && "r2" && "r3" && "r4" && "r5" && "r6" && "r7" && "r8" && "r9" && "r10"].value == null ||
+            myForm["r1" && "r2" && "r3" && "r4" && "r5" && "r6" && "r7" && "r8" && "r9" && "r10"].value == ""
         ) {
             alert("Completa la evaluación !");
             location = "#main";
             return false;
         } else {
-            console.log("ahí vamos");
-            // enviando_respuestas.style.display = "inline";
-            // setTimeout(() => {
-            //     enviando_respuestas.style.display = "none";
-            // }, 1500);
-
-            // setTimeout(() => {
             if (myForm["r" + i].value === respuestas[i - 1]) {
                 puntos++;
                 location = "#main";
-                console.log(i + " bien" + resultado_respuesta.target);
+                console.log(i + " bien");
                 resultado_respuesta[i - 1].innerHTML = `
                                             <h6 class="respuesta-correcta d-inline px-5">Respuesta Correcta ! <i class="bi bi-check-square-fill"></i></h6>
                 `;
@@ -51,9 +44,7 @@ function verificarRespuestas() {
                 `;
                 console.log(i + " mal");
             }
-            // }, 1500);
         }
-        // setTimeout(() => {
 
         resultado.innerHTML = "Respuestas correctas: " + puntos + " / " + total;
 
@@ -61,7 +52,6 @@ function verificarRespuestas() {
         myalertBtns.classList.add("on-btns");
 
         location = "#main";
-        // }, 1500);
     }
 
     return false;

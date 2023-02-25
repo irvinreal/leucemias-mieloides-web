@@ -54,7 +54,7 @@ ul a:hover {
 }
 
 .on {
-    display: block;
+    display: block !important;
 }
 
 .on-btns {
